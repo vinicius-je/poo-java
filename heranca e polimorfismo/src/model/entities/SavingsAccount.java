@@ -1,4 +1,4 @@
-package entities;
+package model.entities;
 /******************************************************************************
 *   Nota de aula
 *   Final em Classe: Não permite que a classe SavingsAccount seja herdada
@@ -31,7 +31,8 @@ public final class SavingsAccount extends Account {
     }
 
     public String toString(){
-        return "\nNumber: " + getNumber() + 
+        return "\nAccount Type: " + getClass().getSimpleName() +
+                "\nNumber: " + getNumber() + 
                 "\nHolder: " + getHolder() + 
                 "\nBalance: " + balance +
                 "\nInterest Rate: " + interestRate;

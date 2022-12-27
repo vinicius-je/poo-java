@@ -1,11 +1,13 @@
 package aplication;
 
 import java.io.Console;
+import java.util.Locale;
 
-import entities.Bank;
+import model.entities.Bank;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        Locale.setDefault(Locale.US);
         Console con = System.console();
         Bank bank = new Bank();
 

@@ -1,4 +1,6 @@
-package entities;
+package model.entities;
+
+import model.exceptions.DomainException;
 
 public abstract class Account {
     private Integer number;
@@ -39,8 +41,11 @@ public abstract class Account {
 
     //Métodos
     public void withdraw(Double amount){
-        if(balance >= amount)
+        if(balance >= amount){
             this.balance -= amount;
+        }else{
+            throw new DomainException("Not enough balance");
+        }
     }
     
     public void deposit(Double amount){

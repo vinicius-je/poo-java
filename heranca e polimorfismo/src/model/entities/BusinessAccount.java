@@ -1,4 +1,4 @@
-package entities;
+package model.entities;
 
 public class BusinessAccount extends Account {
     public Double loanLimit;
@@ -28,7 +28,8 @@ public class BusinessAccount extends Account {
     }
 
     public String toString(){
-        return "\nNumber: " + getNumber() + 
+        return "\nAccount Type: " + getClass().getSimpleName() +
+                "\nNumber: " + getNumber() + 
                 "\nHolder: " + getHolder() + 
                 "\nBalance: " + balance + 
                 "\nLoan limit: " + loanLimit;
